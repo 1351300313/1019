@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "perpson";
+    var a = 10.5;
+    var b = 20.5;
+    int y = 100;
+}
+
+<h2>perpson</h2>
+<p>内容介绍：</p>
+<h1>jiutinei</h1>
+<ul>
+    <li>@Html.ActionLink("主页", "Index", "Home")</li>
+    <li>@Html.ActionLink("关于", "About", "Home")</li>
+    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+    <li>@Html.ActionLink("信息", "Home", "perpson")</li>
+</ul>
+<div>
+   <h1>perpson</h1>
+    <div>结果：@ViewBag.sum</div>
+    <div>@(a+b)</div>
+</div>
+<ul>
+    @for (int i=0;i<10;i++)
+    {
+        <li>元素:（i+1)</li>
+    }
+
+</ul>
