@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+
+<h2>List</h2>
+ 
+ 
+ <ol>
+        @foreach (var item in Model)
+            {
+                < li > @item </ li >
+            }
+    
+    
+</ol>
+ 
+ 
+ <ol>
+    +    @for (int i = 0; i < Model.Length; i++)
+            {
+                < li > @Model[i] </ li >
+            }
+    
+</ol>
+
