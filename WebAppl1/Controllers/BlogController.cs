@@ -49,5 +49,27 @@
             ViewData.Model = article;
              return View();
          }
-     }
+        public ActionResult Edit(int id)
+        {
+            var db = new BlogDatabase();
+            var article = db.BlogArticles.First(o => o.Id == id);
+
+            ViewData.Model = article;
+            return View();
+        }
+
+        public ActionResult EditSave(int id, string subject, string body)
+        {
+            var db = new BlogDatabase();
+            var article = db.BlogArticles.First(o => o.Id == id);
+
+            article.Subject = subject;
+            article.Body = body;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+    }
+
  } 
