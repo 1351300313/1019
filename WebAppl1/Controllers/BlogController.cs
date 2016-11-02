@@ -15,9 +15,7 @@
  
             db.Database.CreateIfNotExists();
  
-           var lst = db.BlogArticles.OrderByDescending(o => o.Id).ToList();
-           ViewBag.BlogArticles = lst;
-            var lst = db.BlogArticles.AsQueryable();
+             var lst = db.BlogArticles.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(rob))
               {
