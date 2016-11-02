@@ -6,8 +6,12 @@
 
 <h2>博客</h2>
 
-<ol>
 
+<ol>
+    <fieldset>
+            <form method="get" action="@Url.Action("index")">搜索： <input type="text" name="rob" value="@ViewBag.rob" />  <input type="submit" value="搜索" /> </form>
+        
+    </fieldset>
 
     @foreach (var item in articles)
     {
