@@ -33,8 +33,15 @@ using System.Linq;
  
          public ActionResult AddArticle()
          {
-             return View();
-         }
+           if (Request.Cookies["isauth"] != null && Request.Cookies["isauth"].Value == "true")
+                {
+                     return View();
+                 }
+          else
+             {
+               return RedirectToAction("login", "cookiedemo");
+                 }
+        }
  
          //public ActionResult ArticleSave(string subject, string body)
 

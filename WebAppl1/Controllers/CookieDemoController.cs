@@ -29,6 +29,21 @@ namespace WebAppl1.Controllers
             ViewBag.count = count;
             return View();
         }
+        public ActionResult Login(string username,string password)
+        {
+          
+            return View();
+        }
+        public ActionResult PostLogin(string username, string password)
+        {
+             if (username == "asb" && password == "250")
+             {
+                 var cookie = new HttpCookie("isauth", "true");
+                 Response.Cookies.Add(cookie);
+                 return RedirectToAction("AddArticle", "Blog");
+             }
+            return View();
+         }
     }
 }
         
